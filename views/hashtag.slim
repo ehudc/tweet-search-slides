@@ -1,0 +1,30 @@
+doctype html
+
+head
+  meta charset="utf-8"
+  meta name="viewport" content="width=device-width"
+  title= 'Twitter Search Slides' 
+  link href='css/foundation.css' rel='stylesheet' type='text/css'
+  link href='css/normalize.css' rel='stylesheet' type='text/css'
+  script src='js/vendor/custom.modernizr.js'
+
+body
+  .row
+  	h6.text-center = "Search results for ##{$hashtag}"
+
+  .row.small-2 style="height: 500;"
+      ul(data-orbit='' data-options="bullets:false;" style="padding-top:100px; width: 300; height: 500;")
+        - $tweets.shuffle!.each do |tweet|
+          li.table
+          	tr
+          	  td
+          	    img(src=tweet.profile_image_url.gsub(/_normal\./, '.') width=500 style="margin:auto;")
+              td	
+                h2.text-center = "@#{tweet.from_user}: #{tweet.text}"
+
+  javascript:
+    document.write('<script src=/js/vendor/' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js><\/script>');
+  script src='js/foundation.min.js'
+  script src='js/foundation/foundation.orbit.js'
+  javascript:
+    $(document).foundation();
