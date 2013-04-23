@@ -6,6 +6,26 @@
   box-sizing: border-box; }
 
 html,
+
+/****CUSTOM CSS****/
+
+#headerContent {
+  margin-top: 20px;
+  text-align:center;
+  margin-right: auto;
+  margin-left: auto;
+  background: url("http://static.tumblr.com/c1mtrdf/gICla5iky/bg.jpg") repeat scroll 0% 0% transparent;
+    background-color: transparent;
+    background-image: url("http://static.tumblr.com/c1mtrdf/gICla5iky/bg.jpg");
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-size: auto auto;
+}
+/****END CUSTOM****/
+
 body {
   font-size: 100%; }
 

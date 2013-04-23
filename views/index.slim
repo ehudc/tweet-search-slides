@@ -9,7 +9,11 @@ head
   script src='js/vendor/custom.modernizr.js'
 
 body
-  .row
-    form action="/" method="POST"
-      input type="text" name="hashtag"
-      input.button type="submit" value="Search!"
+  #headerContent
+    h4 Search Twitter, see the results!
+    h5 Enter a search term below:
+   
+    .row style="width:200px; padding-top: 20px; display:block; align:center;"
+      form action="/" method="POST"
+        input type="text" name="hashtag"
+        input.button type="submit" value="Search!"
